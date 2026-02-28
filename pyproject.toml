@@ -1,0 +1,20 @@
+[project]
+name = "iflow-mcp_zie619-whatsapp-mcp-server"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+    "requests>=2.32.3",
+]
+[project.scripts]
+whatsapp-mcp-server = "main:main"
+
+[tool.setuptools]
+py-modules = ["audio", "mcp_bridge", "main", "stdio_tcp_bridge", "tcp_server", "whatsapp"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
